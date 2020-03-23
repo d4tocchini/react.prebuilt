@@ -1,10 +1,9 @@
 {
   "name": "react.prebuilt",
-  "version": "16.0.0",
-  "description": "",
+  "version": "1.0.0",
+  "description": "concurrently downloads prebuilt react (umd via unpkg), both minified & dev of evergreen stable & experimental",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "preinstall": "npm run build",
     "build": "npm run dl-dev &  npm run dl-prod &  npm run dl-dev-exp &  npm run dl-prod-exp &  wait && echo '✅' || echo '❌' ",
     "dl-dev" : "curl -L -o react.js https://unpkg.com/react@16/umd/react.development.js",
@@ -12,6 +11,6 @@
     "dl-dev-exp" : "curl -L -o experimental/react.js https://unpkg.com/react@experimental/umd/react.development.js",
     "dl-prod-exp": "curl -L -o experimental/react.min.js https://unpkg.com/react@experimental/umd/react.production.min.js"
   },
-  "author": "",
+  "author": "d4tocchini",
   "license": "ISC"
 }
