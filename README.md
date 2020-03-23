@@ -1,0 +1,3 @@
+# react.prebuilt
+
+Towards a sustainable exile from npm...
